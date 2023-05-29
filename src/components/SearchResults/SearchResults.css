@@ -1,0 +1,27 @@
+.SearchResults {
+  box-sizing: border-box;
+  display: block;
+  padding: 40px 20px;
+  background-color: rgba(0, 17, 51, 0.6);
+  width: 500px;
+  height: 1000px;
+  position: relative;
+  z-index: 2;
+  margin: 100px auto;
+  box-shadow: -2px 0px black, 2px 6px black;
+}
+.h1Results {
+  position: relative;
+  top: 0;
+  z-index: 3;
+}
+.tracklistContainer {
+  box-sizing: border-box;
+  display: block;
+  margin-top: 20px;
+  overflow-y: scroll;
+  max-height: calc(100% - 30px);
+}
+.tracklistContainer::-webkit-scrollbar {
+  display: none;
+}
