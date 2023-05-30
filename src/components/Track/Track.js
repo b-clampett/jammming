@@ -19,6 +19,11 @@ function Track({ track, handleAddTrack, handleRemoveTrack }) {
           <p className="pTrack">
             {track.artist} | {track.album}{" "}
           </p>
+          <br />
+          <audio className="audio" controls>
+            <source src={track.preview} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
         {button}
       </div>
