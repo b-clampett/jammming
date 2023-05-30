@@ -11,7 +11,7 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [playlist, setPlaylist] = useState([]);
-
+  /*
   useEffect(() => {
     async function handleInitialAuthorization() {
       try {
@@ -26,7 +26,7 @@ function App() {
     }
     handleInitialAuthorization();
   }, []);
-
+  */
   async function searchAPI(trackQuery) {
     try {
       setIsloading(true);
