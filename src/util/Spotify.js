@@ -1,4 +1,4 @@
-const redirectUri = "https://jammmmingproj.netlify.app";
+const redirectUri = "https://main--jammmingproj.netlify.app/";
 const baseUrl = "https://accounts.spotify.com/authorize";
 
 const Spotify = {
