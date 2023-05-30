@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     async function handleInitialAuthorization() {
-      console.log("UseEffect called for initial authorization");
       try {
         setIsloading(true);
         await Spotify._handleSpotifyCallback();
