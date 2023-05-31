@@ -31,7 +31,11 @@ function App() {
     try {
       setIsloading(true);
       const response = await Spotify.search(trackQuery);
-      setSearchResults(response);
+      response.map((track) => (track.userInput = trackQuery));
+      const filteredResults = response.filter(
+        (track) => !playlist.some((plTrack) => plTrack.id === track.id)
+      );
+      setSearchResults(filteredResults);
     } catch (error) {
       console.error(error);
       setErrorMessage(
@@ -59,13 +63,20 @@ function App() {
   }
 
   function handleAddTrack(track) {
-    if (playlist.some((t) => track.id === t.id)) {
-      return;
-    }
     setPlaylist((previous) => [...previous, track]);
+    setSearchResults(searchResults.filter((t) => track.id !== t.id));
   }
   function handleRemoveTrack(track) {
     setPlaylist(playlist.filter((t) => track.id !== t.id));
+    const userInputWords = track.userInput.split(" ");
+    if (
+      !userInputWords.some((word) => searchResults[0].userInput.includes(word))
+    ) {
+      return;
+    }
+    const updatedSearchResults = [...searchResults];
+    updatedSearchResults.splice(track.index, 0, track);
+    setSearchResults(updatedSearchResults);
   }
 
   return (

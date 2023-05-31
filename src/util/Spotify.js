@@ -45,6 +45,7 @@ const Spotify = {
       const token = await this._handleSpotifyCallback();
       //console.log(`The search token is ${token}`);
       const endpoint = `https://api.spotify.com/v1/search?type=track&q=${trackQuery}`;
+      const randomNumber = Math.floor(Math.random() * 1000000);
       const response = await fetch(endpoint, {
         method: "GET",
         headers: {
@@ -56,14 +57,19 @@ const Spotify = {
         if (!jsonResponse.tracks) {
           return [];
         }
-        return jsonResponse.tracks.items.map((track) => ({
-          id: track.id,
-          name: track.name,
-          artist: track.artists[0].name,
-          album: track.album.name,
-          uri: track.uri,
-          preview: track.preview_url,
-        }));
+        return jsonResponse.tracks.items.map((track, index) => {
+          const responseObject = {
+            id: track.id,
+            name: track.name,
+            artist: track.artists[0].name,
+            album: track.album.name,
+            uri: track.uri,
+            preview: track.preview_url,
+            index: index,
+            userInput: "",
+          };
+          return responseObject;
+        });
       } else {
         throw new Error("Request Failed!");
       }
