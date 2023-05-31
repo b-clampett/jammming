@@ -45,7 +45,6 @@ const Spotify = {
       const token = await this._handleSpotifyCallback();
       //console.log(`The search token is ${token}`);
       const endpoint = `https://api.spotify.com/v1/search?type=track&q=${trackQuery}`;
-      const randomNumber = Math.floor(Math.random() * 1000000);
       const response = await fetch(endpoint, {
         method: "GET",
         headers: {
