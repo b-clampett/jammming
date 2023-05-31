@@ -1,6 +1,7 @@
 .SearchResults {
   box-sizing: border-box;
   display: block;
+  position: relative;
   padding: 40px 20px;
   background-color: rgba(0, 17, 51, 0.6);
   width: 500px;
@@ -18,10 +19,29 @@
 .tracklistContainer {
   box-sizing: border-box;
   display: block;
+  position: relative;
   margin-top: 20px;
   overflow-y: scroll;
   max-height: calc(100% - 30px);
 }
 .tracklistContainer::-webkit-scrollbar {
   display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.loadingSpinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }

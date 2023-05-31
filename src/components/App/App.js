@@ -30,6 +30,7 @@ function App() {
   async function searchAPI(trackQuery) {
     try {
       setIsloading(true);
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       const response = await Spotify.search(trackQuery);
       response.map((track) => (track.userInput = trackQuery));
       const filteredResults = response.filter(
@@ -94,6 +95,7 @@ function App() {
         <SearchResults
           searchResults={searchResults}
           handleAddTrack={handleAddTrack}
+          isLoading={isLoading}
         />
         <Playlist
           playlist={playlist}
@@ -101,7 +103,6 @@ function App() {
           handleRemoveTrack={handleRemoveTrack}
         />
       </div>
-      {isLoading && <p>Loading...</p>}
       {errorMessage && <p className="error-message">Error: {errorMessage}</p>}
     </div>
   );
