@@ -14,7 +14,7 @@ function Playlist({ playlist, setPlaylist, handleRemoveTrack }) {
 
   async function savePlaylist(uris) {
     setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     if (uris.length > 0) {
       try {
         await Spotify.handleSavePlaylist(uris, playlistName);

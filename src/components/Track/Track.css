@@ -30,6 +30,7 @@
   outline: none;
   border: none;
   vertical-align: middle;
+  transition: box-shadaow 1s ease;
 }
 .trackButton:hover {
   box-shadow: 0 0 5px 5px white;
