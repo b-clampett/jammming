@@ -30,7 +30,7 @@ function App() {
   async function searchAPI(trackQuery) {
     try {
       setIsloading(true);
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       const response = await Spotify.search(trackQuery);
       response.map((track) => (track.userInput = trackQuery));
       const filteredResults = response.filter(

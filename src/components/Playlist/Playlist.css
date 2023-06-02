@@ -1,7 +1,7 @@
 .Playlist {
   box-sizing: border-box;
   display: block;
-  margin: 100px auto;
+  margin: 100px 20px;
   padding: 40px 20px;
   /*background-color: rgba(25, 25, 112, 0.7);*/
   background-color: rgba(0, 17, 51, 0.6);
