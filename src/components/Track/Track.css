@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 0px 20px;
+  padding: 0rem 1.25rem;
 }
 .container1 {
   display: flex;
@@ -21,11 +21,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 0.625rem;
   width: 0;
   height: 0;
   color: white;
-  font-size: 32px;
+  font-size: 2rem;
   background: none;
   outline: none;
   border: none;
@@ -33,11 +33,11 @@
   transition: box-shadaow 1s ease;
 }
 .trackButton:hover {
-  box-shadow: 0 0 5px 5px white;
+  box-shadow: 0 0 0.3125rem 0.3125rem white;
 }
 
 .audio {
-  height: 15px;
+  height: 0.9375rem;
 }
 
 .audio::-webkit-media-controls-panel {

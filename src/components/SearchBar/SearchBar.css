@@ -3,14 +3,14 @@
 }
 .input {
   display: block;
-  margin: 30px auto;
+  margin: 1.875rem auto;
   border-radius: 3px;
   border: none;
   outline: none;
-  height: 50px;
-  width: 280px;
+  height: 3.125rem;
+  width: 17.5rem;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   position: relative;
   z-index: 2;
@@ -18,13 +18,13 @@
 .button {
   position: relative;
   z-index: 2;
-  width: 145px;
-  height: 45px;
-  border-radius: 45px;
+  width: 9.0625rem;
+  height: 2.8125rem;
+  border-radius: 2.8125rem;
   border: none;
   box-shadow: none;
   outline: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   /*background-color: midnightblue;*/
   background-color: rgba(0, 17, 51, 0.75);
