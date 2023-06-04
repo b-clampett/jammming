@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchBar.css";
+import styles from "./SearchBar.module.css";
 
 function SearchBar({
   userInput,
@@ -8,15 +8,15 @@ function SearchBar({
   handleKeyDown,
 }) {
   return (
-    <div className="SearchBar">
+    <div className={styles.SearchBar}>
       <input
-        className="input"
+        className={styles.input}
         placeholder="Enter A Song Title "
         value={userInput}
         onChange={handleOnChange}
         onKeyDown={handleKeyDown}
       />
-      <button className="button" onClick={handleOnClick}>
+      <button className={styles.button} onClick={handleOnClick}>
         Search
       </button>
     </div>

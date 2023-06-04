@@ -39,3 +39,9 @@
   background-color: #fff;
   color: midnightblue;
 }
+
+@media only screen and (max-width: 800px) {
+  .input {
+   
+  }
+}

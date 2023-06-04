@@ -1,5 +1,5 @@
 import React from "react";
-import "./Tracklist.css";
+import styles from "./Tracklist.module.css";
 import Track from "../Track/Track";
 
 function Tracklist({ tracks, handleAddTrack, handleRemoveTrack }) {
@@ -17,7 +17,7 @@ function Tracklist({ tracks, handleAddTrack, handleRemoveTrack }) {
       </li>
     );
   });
-  return <ul className="ulTracklist">{tracklist}</ul>;
+  return <ul className={styles.ulTracklist}>{tracklist}</ul>;
 }
 
 export default Tracklist;

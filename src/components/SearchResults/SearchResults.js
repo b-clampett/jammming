@@ -1,17 +1,17 @@
 import React from "react";
 import spinner from "../../images/spinner.gif";
-import "./SearchResults.css";
+import styles from "./SearchResults.module.css";
 import TrackList from "../Tracklist/Tracklist";
 
 function SearchResults({ searchResults, handleAddTrack, isLoading }) {
   return (
-    <div className="SearchResultsContainer">
-      {isLoading && <div className="overlay"></div>}
-      <div className="SearchResults">
-        <h1 className="h1Results">Results</h1>
-        <div className="tracklistContainer">
+    <div className={styles.SearchResultsContainer}>
+      {isLoading && <div className={styles.overlay}></div>}
+      <div className={styles.SearchResults}>
+        <h1 className={styles.h1Results}>Results</h1>
+        <div className={styles.tracklistContainer}>
           {isLoading && (
-            <div className="loadingSpinner">
+            <div className={styles.loadingSpinner}>
               <img src={spinner} alt="...Loading" height="64" width="64" />
             </div>
           )}
