@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import Spotify from "../../util/Spotify";
 import SearchResults from "../SearchResults/SearchResults";
 import SearchBar from "../SearchBar/SearchBar";
@@ -81,9 +81,9 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1 className="h1">
-        Ja<span className="span">mmm</span>ing
+    <div className={styles.App}>
+      <h1 className={styles.h1}>
+        Ja<span className={styles.span}>mmm</span>ing
       </h1>
       <SearchBar
         userInput={userInput}
@@ -91,7 +91,7 @@ function App() {
         handleOnClick={handleOnClick}
         handleKeyDown={handleKeyDown}
       />
-      <div className="container">
+      <div className={styles.container}>
         <SearchResults
           searchResults={searchResults}
           handleAddTrack={handleAddTrack}

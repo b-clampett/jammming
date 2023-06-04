@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import spinner from "../../images/spinner.gif";
-import "./Playlist.css";
+import styles from "./Playlist.module.css";
 import Tracklist from "../Tracklist/Tracklist";
 import Spotify from "../../util/Spotify";
 
@@ -54,26 +54,26 @@ function Playlist({ playlist, setPlaylist, handleRemoveTrack }) {
     }
   }
   return (
-    <div>
+    <div className={styles.Playlist}>
       {isLoading && <div className="overlay"></div>}
-      <form className="Playlist" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
-          className="inputPlaylist"
+          className= {styles.inputPlaylist}
           style={{ border: "none" }}
           placeholder="New Playlist"
           value={playlistName}
           onChange={handleNameChange}
         />
-        <hr className="hr" />
-        <div className="playlistContainer">
+        <hr className={styles.hr} />
+        <div className={styles.playlistContainer}>
           <Tracklist tracks={playlist} handleRemoveTrack={handleRemoveTrack} />
-          <button className="button btnPlaylist" type="submit">
+          <button className={styles.btnPlaylist} type="submit">
             Save To Spotify
           </button>
           <br />
           {isLoading && (
             <img
-              className="loadingSpinner"
+              className={styles.loadingSpinner}
               src={spinner}
               alt="...Loading"
               height="64"
